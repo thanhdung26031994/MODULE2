@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f206fcf-279f-4f02-900f-69d49a34229d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bài tập dành cho những bạn học lại..xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/controller/FruitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/model/Fruit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/repository/IFruitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/repository/impl/FruitRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/service/IFruitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/service/impl/FruitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss10_dsa_list/view/FruitMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss11_dsa_stack_queue/StackQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/controller/FruitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/model/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/repository/IFruitRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/repository/impl/FruitRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/service/IFruitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/service/impl/FruitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss12_map_set/view/FruitMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bài tập dành cho những bạn học lại..xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Bài tập dành cho những bạn học lại..xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.StackQueue">
     <configuration name="FruitMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss10_dsa_list.view.FruitMenu" />
       <module name="Module2" />
@@ -71,8 +72,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StackQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss11_dsa_stack_queue.StackQueue" />
+      <module name="Module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss11_dsa_stack_queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StackQueue" />
         <item itemvalue="Application.FruitMenu" />
       </list>
     </recent_temporary>
@@ -87,7 +102,7 @@
       <updated>1699950079067</updated>
       <workItem from="1699950080087" duration="2572000" />
       <workItem from="1700017248051" duration="114000" />
-      <workItem from="1700017454406" duration="7059000" />
+      <workItem from="1700017454406" duration="13055000" />
     </task>
     <servers />
   </component>
