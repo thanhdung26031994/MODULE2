@@ -49,6 +49,12 @@ public class JobMenu {
                 case 6:
                     searchNameJob();
                     break;
+                case 7:
+                    sortByNameJob();
+                    break;
+                case 8:
+                    sortByMoneyJob();
+                    break;
                 case 0:
                     System.exit(0);
                 default:
@@ -56,6 +62,22 @@ public class JobMenu {
             }
         } while (true);
 
+    }
+
+    private static void sortByMoneyJob() {
+        System.out.println("Sắp xếp theo tiền giảm dần: ");
+        List<Job> jobList = jobController.sortByMoney();
+        for (Job job1: jobList){
+            System.out.println(job1);
+        }
+    }
+
+    private static void sortByNameJob() {
+        System.out.println("Sắp xếp theo tên tăng dần: ");
+        List<Job> jobList = jobController.sortByName();
+        for (Job job1: jobList) {
+            System.out.println(job1);
+        }
     }
 
     private static void searchNameJob() {

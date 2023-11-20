@@ -19,4 +19,8 @@ public interface IJobService {
     Job findByCode(String code);
 
     List<Job> findByName(String name);
+
+    List<Job> sortByName();
+
+    List<Job> sortByMoney();
 }

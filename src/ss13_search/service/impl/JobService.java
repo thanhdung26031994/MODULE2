@@ -4,7 +4,10 @@ import ss13_search.model.Job;
 import ss13_search.repository.IJobRepository;
 import ss13_search.repository.impl.JobRepository;
 import ss13_search.service.IJobService;
+import ss13_search.utils.CsvFile;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class JobService implements IJobService {
@@ -43,5 +46,19 @@ public class JobService implements IJobService {
     @Override
     public List<Job> findByName(String name) {
         return jobRepository.findByName(name);
+    }
+
+    @Override
+    public List<Job> sortByName() {
+        List<Job> jobList = jobRepository.getAll();
+        Collections.sort(jobList, Comparator.comparing(Job :: getName));
+        return jobList;
+    }
+
+    @Override
+    public List<Job> sortByMoney() {
+        List<Job> jobList = jobRepository.getAll();
+        Collections.sort(jobList, Comparator.comparing(Job::getMoney).reversed().thenComparing(Job::getName));
+        return jobList;
     }
 }

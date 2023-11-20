@@ -37,4 +37,12 @@ public class JobController {
     public List<Job> findByName(String name) {
         return jobService.findByName(name);
     }
+
+    public List<Job> sortByName() {
+        return jobService.sortByName();
+    }
+
+    public List<Job> sortByMoney() {
+        return jobService.sortByMoney();
+    }
 }

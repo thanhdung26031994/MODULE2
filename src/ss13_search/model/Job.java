@@ -73,4 +73,5 @@ public class Job {
                 ", Số tiền: " + money +
                 ", Mô tả: " + describe;
     }
+
 }
