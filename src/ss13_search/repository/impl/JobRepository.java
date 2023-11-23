@@ -3,6 +3,8 @@ package ss13_search.repository.impl;
 import ss13_search.model.Job;
 import ss13_search.repository.IJobRepository;
 import ss13_search.utils.CsvFile;
+import ss13_search.utils.IdNotFoundException;
+import ss13_search.utils.UniqueIDException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,7 @@ public class JobRepository implements IJobRepository {
     }
 
     @Override
-    public boolean checkCode(String code) {
+    public boolean checkCode(String code) throws UniqueIDException{
         List<Job> jobList = CsvFile.readToFile();
         for (Job job: jobList){
             if (job.getCode().equals(code)){
@@ -40,7 +42,7 @@ public class JobRepository implements IJobRepository {
     }
 
     @Override
-    public void removeJob(String code) {
+    public void removeJob(String code) throws IdNotFoundException {
         List<Job> jobList = CsvFile.readToFile();
         for (Job job: jobList){
             if (job.getCode().equals(code)){

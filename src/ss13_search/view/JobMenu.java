@@ -2,7 +2,9 @@ package ss13_search.view;
 
 import ss13_search.controller.JobController;
 import ss13_search.model.Job;
+import ss13_search.utils.IdNotFoundException;
 import ss13_search.utils.RegexJob;
+import ss13_search.utils.UniqueIDException;
 
 import java.util.List;
 import java.util.Scanner;
@@ -15,7 +17,7 @@ public class JobMenu {
     private static final String REGEX_DATA = "^(0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2}$";
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UniqueIDException {
         int choice;
         do {
             System.out.println("-------Chức năng-------\n" +
@@ -83,7 +85,7 @@ public class JobMenu {
     private static void searchNameJob() {
         System.out.print("Nhập tên tìm kiếm: ");
         String name = IN.nextLine();
-        if (jobController.findByName(name) == null){
+        if (jobController.findByName(name).size() == 0){
             System.out.println("Không có tên công việc cần tìm.");
         }else {
             System.out.println(jobController.findByName(name));
@@ -91,7 +93,7 @@ public class JobMenu {
     }
 
 
-    private static void searchCode() {
+    private static void searchCode() throws UniqueIDException {
         System.out.print("Nhập mã muốn tìm:");
         String code = IN.nextLine();
         if (jobController.checkCode(code)) {
@@ -102,7 +104,7 @@ public class JobMenu {
         }
     }
 
-    private static void editJob() {
+    private static void editJob() throws UniqueIDException {
         System.out.print("Nhập mã muốn sửa:");
         String code = IN.nextLine();
         if (jobController.checkCode(code)) {
@@ -114,15 +116,28 @@ public class JobMenu {
         }
     }
 
-    private static void deleteJob() {
-        System.out.println("Nhập mã muốn xoá: ");
-        String code = IN.nextLine();
-        if (jobController.checkCode(code)) {
-            jobController.removeJob(code);
-            System.out.println("Xoá thành công.");
-        } else {
-            System.out.println("Không có mã này.");
+    private static void deleteJob() throws UniqueIDException {
+        try {
+            System.out.println("Nhập mã muốn xoá: ");
+            String code = IN.nextLine();
+            String yesNo;
+            if (jobController.checkCode(code)) {
+                System.out.println("Bạn có chắc chắn muốn xoá thì ấn Y (Đúng) hoặc N (Không).");
+                yesNo = IN.nextLine().toLowerCase().trim();
+                if (yesNo.equals("y")){
+                    jobController.removeJob(code);
+                    System.out.println("Xoá thành công.");
+                }else if (yesNo.equals("n")){
+                    return;
+                }
+
+            } else {
+                System.out.println("Không có mã này.");
+            }
+        }catch (IdNotFoundException e){
+            System.out.println(e.getMessage());
         }
+
     }
 
     private static void addJob() {
@@ -205,17 +220,21 @@ public class JobMenu {
         String code = null;
         boolean valid = false;
         while (!valid) {
-            System.out.println("Nhập mã (CV-xxx): ");
-            code = IN.nextLine();
-            if (jobController.checkCode(code)) {
-                System.out.println("Mã này đã tồn tại.");
-                continue;
+            try {
+                System.out.println("Nhập mã (CV-xxx): ");
+                code = IN.nextLine();
+                if (jobController.checkCode(code)) {
+                    System.out.println("Mã này đã tồn tại.");
+                    continue;
+                }
+                valid = true;
+            }catch (UniqueIDException e){
+                System.out.println(e.getMessage());
             }
-            valid = true;
+
         }
         return code;
     }
-
     private static void displayJob() {
         List<Job> jobList = jobController.getAll();
         if (jobList.isEmpty()) {

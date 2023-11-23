@@ -5,6 +5,8 @@ import ss13_search.repository.IJobRepository;
 import ss13_search.repository.impl.JobRepository;
 import ss13_search.service.IJobService;
 import ss13_search.utils.CsvFile;
+import ss13_search.utils.IdNotFoundException;
+import ss13_search.utils.UniqueIDException;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -19,7 +21,7 @@ public class JobService implements IJobService {
     }
 
     @Override
-    public boolean checkCode(String code) {
+    public boolean checkCode(String code) throws UniqueIDException {
         return jobRepository.checkCode(code);
     }
 
@@ -29,7 +31,7 @@ public class JobService implements IJobService {
     }
 
     @Override
-    public void removeJob(String code) {
+    public void removeJob(String code) throws IdNotFoundException {
         jobRepository.removeJob(code);
     }
 

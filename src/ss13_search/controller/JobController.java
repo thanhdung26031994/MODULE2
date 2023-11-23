@@ -4,6 +4,8 @@ import ss12_map_set.service.IFruitService;
 import ss13_search.model.Job;
 import ss13_search.service.IJobService;
 import ss13_search.service.impl.JobService;
+import ss13_search.utils.IdNotFoundException;
+import ss13_search.utils.UniqueIDException;
 
 import java.util.List;
 
@@ -14,7 +16,7 @@ public class JobController {
         return jobService.getAll();
     }
 
-    public boolean checkCode(String code) {
+    public boolean checkCode(String code) throws UniqueIDException {
         return jobService.checkCode(code);
     }
 
@@ -22,7 +24,7 @@ public class JobController {
         jobService.addJob(job);
     }
 
-    public void removeJob(String code) {
+    public void removeJob(String code) throws IdNotFoundException {
         jobService.removeJob(code);
     }
 
