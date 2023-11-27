@@ -93,6 +93,7 @@ public class FacilityView {
         String rentalType = inputRentalTypeFacility();
         String roomStandards = inputRoomStandards();
 
+
     }
 
     private static String inputRoomStandards() {

@@ -6,6 +6,7 @@ import ss13_search.utils.CsvFile;
 import ss13_search.utils.IdNotFoundException;
 import ss13_search.utils.UniqueIDException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,13 +19,12 @@ public class JobRepository implements IJobRepository {
 //    }
 
     @Override
-    public List<Job> getAll() {
-        List<Job> jobList = CsvFile.readToFile();
-        return jobList;
+    public List<Job> getAll(){
+        return CsvFile.readToFile();
     }
 
     @Override
-    public boolean checkCode(String code) throws UniqueIDException{
+    public boolean checkCode(String code){
         List<Job> jobList = CsvFile.readToFile();
         for (Job job: jobList){
             if (job.getCode().equals(code)){
@@ -35,14 +35,14 @@ public class JobRepository implements IJobRepository {
     }
 
     @Override
-    public void addJob(Job job) {
+    public void addJob(Job job){
         List<Job> jobList = CsvFile.readToFile();
         jobList.add(job);
         CsvFile.writeToFile(jobList);
     }
 
     @Override
-    public void removeJob(String code) throws IdNotFoundException {
+    public void removeJob(String code){
         List<Job> jobList = CsvFile.readToFile();
         for (Job job: jobList){
             if (job.getCode().equals(code)){
@@ -53,7 +53,7 @@ public class JobRepository implements IJobRepository {
     }
 
     @Override
-    public void editJob(String code, Job job) {
+    public void editJob(String code, Job job){
         List<Job> jobList = CsvFile.readToFile();
         for (Job job1: jobList){
             if (job1.getCode().equals(code)){
@@ -67,7 +67,7 @@ public class JobRepository implements IJobRepository {
     }
 
     @Override
-    public Job findByCode(String code) {
+    public Job findByCode(String code){
         List<Job> jobList = CsvFile.readToFile();
         for (Job job: jobList){
             if (job.getCode().equalsIgnoreCase(code)){
@@ -78,7 +78,7 @@ public class JobRepository implements IJobRepository {
     }
 
     @Override
-    public List<Job> findByName(String name) {
+    public List<Job> findByName(String name){
         List<Job> jobList = CsvFile.readToFile();
         List<Job> jobs = new ArrayList<>();
         for (Job job: jobList){

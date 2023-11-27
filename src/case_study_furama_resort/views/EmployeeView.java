@@ -24,12 +24,12 @@ public class EmployeeView {
         do {
             try {
                 System.out.println("-----------------------------------");
-                System.out.println("1 Hiển thị danh sách nhân viên\n" +
-                        "2 Thêm nhân viên mới\n" +
-                        "3 Chỉnh sửa nhân viên\n" +
-                        "4 Xóa nhân viên\n" +
-                        "5 Tìm kiếm theo tên nhân viên\n" +
-                        "6 Trở về menu chính");
+                System.out.println("1. Hiển thị danh sách nhân viên\n" +
+                        "2. Thêm nhân viên mới\n" +
+                        "3. Chỉnh sửa nhân viên\n" +
+                        "4. Xóa nhân viên\n" +
+                        "5. Tìm kiếm theo tên nhân viên\n" +
+                        "6. Trở về menu chính");
                 System.out.print("Vui lòng chọn: ");
                 choice = Integer.parseInt(in.nextLine());
                 switch (choice){

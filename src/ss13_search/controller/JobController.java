@@ -7,44 +7,45 @@ import ss13_search.service.impl.JobService;
 import ss13_search.utils.IdNotFoundException;
 import ss13_search.utils.UniqueIDException;
 
+import java.io.IOException;
 import java.util.List;
 
 public class JobController {
     private static IJobService jobService = new JobService();
 
-    public List<Job> getAll() {
+    public List<Job> getAll(){
         return jobService.getAll();
     }
 
-    public boolean checkCode(String code) throws UniqueIDException {
+    public boolean checkCode(String code){
         return jobService.checkCode(code);
     }
 
-    public void addJob(Job job) {
+    public void addJob(Job job){
         jobService.addJob(job);
     }
 
-    public void removeJob(String code) throws IdNotFoundException {
+    public void removeJob(String code){
         jobService.removeJob(code);
     }
 
-    public void editJob(String code,Job job) {
+    public void editJob(String code,Job job){
         jobService.editJob(code, job);
     }
 
-    public Job findByCode(String code) {
+    public Job findByCode(String code){
         return jobService.findByCode(code);
     }
 
-    public List<Job> findByName(String name) {
+    public List<Job> findByName(String name){
         return jobService.findByName(name);
     }
 
-    public List<Job> sortByName() {
+    public List<Job> sortByName(){
         return jobService.sortByName();
     }
 
-    public List<Job> sortByMoney() {
+    public List<Job> sortByMoney(){
         return jobService.sortByMoney();
     }
 }

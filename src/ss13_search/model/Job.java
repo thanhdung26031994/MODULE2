@@ -1,6 +1,8 @@
 package ss13_search.model;
 
-public class Job {
+import java.io.Serializable;
+
+public class Job implements Serializable {
     private String code;
     private String name;
     private String data;
