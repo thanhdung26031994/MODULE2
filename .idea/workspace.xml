@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f206fcf-279f-4f02-900f-69d49a34229d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss13_search/data/job1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss19_string_regex/ValidateEmail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/text/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/case_study_furama_resort/models/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/case_study_furama_resort/models/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/case_study_furama_resort/views/BookingView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/text/TimPhanTuXuatHienMotLan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/controllers/FacilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/controllers/FacilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/displayMainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/displayMainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/models/facility/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/models/facility/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/repositories/IFacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/repositories/IFacilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/repositories/impl/FacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/repositories/impl/FacilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/services/IFacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/services/IFacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/services/impl/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/services/impl/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/views/CustomerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/views/CustomerView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/views/EmployeeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/views/EmployeeView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/case_study_furama_resort/views/FacilityView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/case_study_furama_resort/views/FacilityView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/data/job.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/data/job.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/model/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/model/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/repository/IJobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/repository/IJobRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/repository/impl/JobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/repository/impl/JobRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/service/IJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/service/IJobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/service/impl/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/service/impl/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss13_search/utils/CsvFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/utils/CsvFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ss13_search/view/JobMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss13_search/view/JobMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss14_insertion_sort/insertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss14_insertion_sort/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss14_insertion_sort/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss14_insertion_sort/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/text/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/text/TestMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +61,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last.edited.regexp&quot;: &quot;SVRO-0001&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,7 +70,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.JobMenu">
+  <component name="RunManager" selected="Application.displayMainMenu">
     <configuration name="JobMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss13_search.view.JobMenu" />
       <module name="Module2" />
@@ -107,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidateEmail" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ss19_string_regex.ValidateEmail" />
+    <configuration name="TimPhanTuXuatHienMotLan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="text.TimPhanTuXuatHienMotLan" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ss19_string_regex.*" />
+          <option name="PATTERN" value="text.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.displayMainMenu" />
+        <item itemvalue="Application.TimPhanTuXuatHienMotLan" />
+        <item itemvalue="Application.TestMain" />
         <item itemvalue="Application.JobMenu" />
         <item itemvalue="Application.Sort" />
-        <item itemvalue="Application.ValidateEmail" />
-        <item itemvalue="Application.TestMain" />
-        <item itemvalue="Application.displayMainMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -176,11 +179,28 @@
       <workItem from="1700845605657" duration="1244000" />
       <workItem from="1700916651361" duration="628000" />
       <workItem from="1701006038403" duration="598000" />
-      <workItem from="1701054552211" duration="14730000" />
+      <workItem from="1701054552211" duration="15126000" />
+      <workItem from="1701139967025" duration="10377000" />
+      <workItem from="1701183145411" duration="95000" />
+      <workItem from="1701183854414" duration="4000" />
+      <workItem from="1701225466494" duration="3185000" />
+      <workItem from="1701313027648" duration="18027000" />
+      <workItem from="1701346975792" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/text/TestMain.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

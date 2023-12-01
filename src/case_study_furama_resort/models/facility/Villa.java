@@ -5,7 +5,10 @@ public class Villa extends Facility{
     private Integer swimmingArea;
     private Integer floorsNumber;
 
-    public Villa() {
+    public Villa(String roomStandards, Integer swimmingArea, Integer floorsNumber) {
+        this.roomStandards = roomStandards;
+        this.swimmingArea = swimmingArea;
+        this.floorsNumber = floorsNumber;
     }
 
 

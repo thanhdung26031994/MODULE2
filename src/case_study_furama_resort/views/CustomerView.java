@@ -15,8 +15,8 @@ public class CustomerView {
     private static CustomerController customerController = new CustomerController();
     private static int choice;
     private static final String PATH_CODE = "^KH-[0-9]{4}$";
-    private static final String PATH_NAME = "^([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5}(?<=^.{1,50}$)$";
-    private static final String PATH_IDNUMBER = "^[0-9]{9,12}$";
+    public static final String PATH_NAME = "^([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5}(?<=^.{1,50}$)$";
+    private static final String PATH_IDNUMBER = "^[0-9]{9}|[0-9]{12}$";
     private static final String PATH_PHONE = "^0[0-9]{9}$";
     private static final String PATH_EMAIL = "^[A-Za-z0-9\\._]{6,32}@([A-Za-z0-9]{2,12}\\.){1,2}[A-Za-z0-9]{2,12}$";
     public static void customerMenu() {
@@ -53,8 +53,6 @@ public class CustomerView {
                         System.out.println("Vui lòng chọn đúng.");
                 }
             }catch (NumberFormatException e){
-                System.err.println(e.getMessage());
-            }catch (Exception e){
                 System.err.println(e.getMessage());
             }
         }while (true);
@@ -106,70 +104,73 @@ public class CustomerView {
     private static void inputInformCus(String code) {
         List<Customer> customers;
         do {
-            customers = customerController.findByCode(code);
-            System.out.println("---------------------------------");
-            System.out.println("Thông tin khách hàng muốn sửa: ");
-            System.out.println(customers);
-            System.out.println("Chọn danh mục muốn sửa: \n" +
-                    "1. Tên khách hàng.\n" +
-                    "2. Ngày sinh. \n" +
-                    "3. Giới tính.\n" +
-                    "4. Số CMND. \n" +
-                    "5. Số điên thoại.\n" +
-                    "6. Email.\n" +
-                    "7. Loại khách.\n" +
-                    "8. Địa chỉ.\n" +
-                    "0. Quay lại.");
-            System.out.print("Vui lòng chọn: ");
-            choice = Integer.parseInt(in.nextLine());
-            switch (choice){
-                case 1:
-                    String nameUp = inputNameCus();
-                    customerController.editCustomer(code, nameUp, "name");
-                    System.out.println("Sửa tên thành công.");
-                    break;
-                case 2:
-                    String dateUp = inputDateCus();
-                    customerController.editCustomer(code, dateUp, "date");
-                    System.out.println("Sửa ngày sinh thành công.");
-                    break;
-                case 3:
-                    String genderUp = inputGenderCus();
-                    customerController.editCustomer(code, genderUp, "gender");
-                    System.out.println("Sửa giới tính thành công.");
-                    break;
-                case 4:
-                    String idNumberUp = inputIdNumberCus();
-                    customerController.editCustomer(code, idNumberUp, "idNumber");
-                    System.out.println("Sửa số CMND thành công.");
-                    break;
-                case 5:
-                    String phoneUp = inputPhoneCus();
-                    customerController.editCustomer(code, phoneUp, "phone");
-                    System.out.println("Sửa số điện thoại thành công");
-                    break;
-                case 6:
-                    String emailUp = inputEmailCus();
-                    customerController.editCustomer(code, emailUp, "email");
-                    System.out.println("Sửa email thành công");
-                    break;
-                case 7:
-                    String guestTypeUp = inputGuestCus();
-                    customerController.editCustomer(code, guestTypeUp, "guest");
-                    System.out.println("Sửa loại khách thành công");
-                    break;
-                case 8:
-                    System.out.println("Nhập địa chỉ khách: ");
-                    String addressUp = in.nextLine();
-                    customerController.editCustomer(code, addressUp, "address");
-                    System.out.println("Sửa địa chỉ thành công.");
-                    break;
-                case 0:
-                    System.exit(0);
-                default:
-                    System.out.println("Vui lòng chọn đúng.");
+            try {
+                customers = customerController.findByCode(code);
+                System.out.println("---------------------------------");
+                System.out.println("Thông tin khách hàng muốn sửa: ");
+                System.out.println(customers);
+                System.out.println("Chọn danh mục muốn sửa: \n" +
+                        "1. Tên khách hàng.\n" +
+                        "2. Ngày sinh. \n" +
+                        "3. Giới tính.\n" +
+                        "4. Số CMND. \n" +
+                        "5. Số điên thoại.\n" +
+                        "6. Email.\n" +
+                        "7. Loại khách.\n" +
+                        "8. Địa chỉ.\n" +
+                        "0. Quay lại.");
+                System.out.print("Vui lòng chọn: ");
+                choice = Integer.parseInt(in.nextLine());
+                switch (choice){
+                    case 1:
+                        String nameUp = inputNameCus();
+                        customerController.editCustomer(code, nameUp, "name");
+                        System.out.println("Sửa tên thành công.");
+                        break;
+                    case 2:
+                        String dateUp = inputDateCus();
+                        customerController.editCustomer(code, dateUp, "date");
+                        System.out.println("Sửa ngày sinh thành công.");
+                        break;
+                    case 3:
+                        String genderUp = inputGenderCus();
+                        customerController.editCustomer(code, genderUp, "gender");
+                        System.out.println("Sửa giới tính thành công.");
+                        break;
+                    case 4:
+                        String idNumberUp = inputIdNumberCus();
+                        customerController.editCustomer(code, idNumberUp, "idNumber");
+                        System.out.println("Sửa số CMND thành công.");
+                        break;
+                    case 5:
+                        String phoneUp = inputPhoneCus();
+                        customerController.editCustomer(code, phoneUp, "phone");
+                        System.out.println("Sửa số điện thoại thành công");
+                        break;
+                    case 6:
+                        String emailUp = inputEmailCus();
+                        customerController.editCustomer(code, emailUp, "email");
+                        System.out.println("Sửa email thành công");
+                        break;
+                    case 7:
+                        String guestTypeUp = inputGuestCus();
+                        customerController.editCustomer(code, guestTypeUp, "guest");
+                        System.out.println("Sửa loại khách thành công");
+                        break;
+                    case 8:
+                        System.out.println("Nhập địa chỉ khách: ");
+                        String addressUp = in.nextLine();
+                        customerController.editCustomer(code, addressUp, "address");
+                        System.out.println("Sửa địa chỉ thành công.");
+                        break;
+                    case 0:
+                        System.exit(0);
+                    default:
+                        System.out.println("Vui lòng chọn đúng.");
+                }
+            }catch (NumberFormatException e){
+                System.err.println(e.getMessage());
             }
-
         }while (true);
     }
 
@@ -354,7 +355,7 @@ public class CustomerView {
         return code;
     }
 
-    private static void displayCustomer() {
+    public static void displayCustomer() {
         List<Customer> customers = customerController.getAll();
         System.out.println("-------------------------------");
         System.out.println("Danh sách khách hàng.");

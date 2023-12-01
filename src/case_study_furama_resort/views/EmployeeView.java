@@ -17,7 +17,7 @@ public class EmployeeView {
     private static int choice;
     private static final String PATH_CODE = "^NV-[0-9]{4}$";
     private static final String PATH_NAME = "^([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5}(?<=^.{1,50}$)$";
-    private static final String PATH_IDNUMBER = "^[0-9]{9,12}$";
+    private static final String PATH_IDNUMBER = "^[0-9]{9}|[0-9]{12}$";
     private static final String PATH_PHONE = "^0[0-9]{9}$";
     private static final String PATH_EMAIL = "^[A-Za-z0-9\\._]{6,32}@([A-Za-z0-9]{2,12}\\.){1,2}[A-Za-z0-9]{2,12}$";
     public static void employeeMenu() {
@@ -152,8 +152,6 @@ public class EmployeeView {
                 }
             }catch (NumberFormatException e){
                 System.err.println(e.getMessage());
-            }catch (Exception e){
-                System.err.println(e.getMessage());
             }
         }while (true);
     }
@@ -263,10 +261,7 @@ public class EmployeeView {
                 }
             }catch (NumberFormatException e){
                 System.err.println(e.getMessage());
-            }catch (Exception e){
-                System.err.println(e.getMessage());
             }
-
         }
         return location;
     }
@@ -305,10 +300,7 @@ public class EmployeeView {
                 }
             }catch (NumberFormatException e){
                 System.err.println(e.getMessage());
-            }catch (Exception e){
-                System.err.println(e.getMessage());
             }
-
         }
         return level;
     }

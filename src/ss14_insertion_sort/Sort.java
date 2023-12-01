@@ -50,8 +50,6 @@ public class Sort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {24, 6, 18, 3, 9, 27, 15};
-        System.out.println(Arrays.toString(bubbleSort(arr)));
-        System.out.println(Arrays.toString(selectionSort(arr)));
+
     }
 }

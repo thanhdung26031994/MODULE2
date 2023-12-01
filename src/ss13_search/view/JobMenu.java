@@ -134,7 +134,6 @@ public class JobMenu {
         } else {
             System.out.println("Không có mã này.");
         }
-
     }
 
     private static void addJob(){

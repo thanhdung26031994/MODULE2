@@ -1,5 +1,6 @@
 package case_study_furama_resort;
 
+import case_study_furama_resort.views.BookingView;
 import case_study_furama_resort.views.CustomerView;
 import case_study_furama_resort.views.EmployeeView;
 import case_study_furama_resort.views.FacilityView;
@@ -32,6 +33,7 @@ public class displayMainMenu {
                         FacilityView.facilityMenu();
                         break;
                     case 4:
+                        BookingView.bookingMenu();
                         break;
                     case 5:
                         break;
